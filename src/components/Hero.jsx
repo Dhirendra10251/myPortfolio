@@ -141,18 +141,12 @@ export default function Hero() {
               <span className="cl" style={{ paddingLeft: '72px' }}><span className="c-str">"Hackathons"</span><span className="c-punct">,</span></span>
               <span className="cl" style={{ paddingLeft: '72px' }}><span className="c-str">"Building Things"</span></span>
               <span className="cl c-indent2"><span className="c-punct">]</span></span>
-              <span className="cl c-indent2"><span className="c-key">self</span><span className="c-punct">.rank</span> = <span className="c-str">"9th / 248 🏆"</span></span>
               <span className="cl">&nbsp;</span>
               <span className="cl c-indent"><span className="c-key">def</span> <span className="c-fn">contact</span><span className="c-punct">(self):</span></span>
               <span className="cl c-indent2"><span className="c-key">return</span> <span className="c-str">"dkt0887@gmail.com"</span></span>
             </div>
           </div>
 
-          <div className="hero-badge">🏆 AMD Slingshot #9 / 248</div>
-          <div className="hero-stat-float">
-            <span className="float-num">36th</span>
-            <span className="float-label">HackZero<br />CTF Rank</span>
-          </div>
         </div>
       </div>
 
