@@ -1,24 +1,25 @@
 import { useState, useEffect } from 'react'
+import Logo from './Logo'
 
 const links = [
-  { href: '#home',     label: 'Home' },
-  { href: '#about',    label: 'About' },
-  { href: '#skills',   label: 'Skills' },
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
-  { href: '#contact',  label: 'Contact' },
+  { href: '#contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false)
-  const [menuOpen, setMenuOpen]   = useState(false)
-  const [active, setActive]       = useState('#home')
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [active, setActive] = useState('#home')
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40)
 
       // Active section tracking
-      const sections = ['home','about','skills','projects','contact']
+      const sections = ['home', 'about', 'skills', 'projects', 'contact']
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i])
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -49,7 +50,9 @@ export default function Navbar() {
     <>
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`} role="navigation" aria-label="Main Navigation">
         <div className="container">
-          <a href="#home" className="nav-logo" aria-label="Go to top">DKT</a>
+          <a href="#home" className="nav-logo" aria-label="Go to top" style={{ display: 'flex', alignItems: 'center' }}>
+            <Logo width={48} height={48} />
+          </a>
           <ul className="nav-links" role="list">
             {links.map(l => (
               <li key={l.href}>
@@ -70,9 +73,9 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(v => !v)}
           >
-            <span style={menuOpen ? { transform:'rotate(45deg) translate(5px, 5px)' } : {}} />
+            <span style={menuOpen ? { transform: 'rotate(45deg) translate(5px, 5px)' } : {}} />
             <span style={menuOpen ? { opacity: 0 } : {}} />
-            <span style={menuOpen ? { transform:'rotate(-45deg) translate(5px, -5px)' } : {}} />
+            <span style={menuOpen ? { transform: 'rotate(-45deg) translate(5px, -5px)' } : {}} />
           </button>
         </div>
       </nav>
@@ -85,7 +88,7 @@ export default function Navbar() {
           </a>
         ))}
         <a href="#contact" className="btn btn-primary" style={{ marginTop: 24, display: 'inline-flex' }}
-           onClick={() => setMenuOpen(false)}>
+          onClick={() => setMenuOpen(false)}>
           Hire Me
         </a>
       </div>

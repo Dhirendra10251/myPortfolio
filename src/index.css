@@ -305,7 +305,7 @@ ul, ol { list-style: none; }
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   padding-top: var(--nav-h);
@@ -344,16 +344,16 @@ ul, ol { list-style: none; }
   background-size: 60px 60px;
   pointer-events: none;
 }
-.hero .container {
+.hero > .container {
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 120px;
-  min-height: calc(100vh - var(--nav-h));
+  flex: 1;
+  padding-top: 40px;
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 /* ---- Hero mount-in animations ---- */
@@ -568,14 +568,12 @@ ul, ol { list-style: none; }
 
 /* Stats Bar */
 .hero-stats-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: 2;
   background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--border);
+  margin-top: auto;
 }
 .hero-stats-bar .container {
   display: grid;
@@ -662,12 +660,13 @@ ul, ol { list-style: none; }
 @keyframes rotate-border {
   to { transform: rotate(360deg); }
 }
-.portrait-initials {
-  font-family: var(--font-display);
-  font-size: 80px;
-  color: var(--accent);
-  opacity: 0.7;
-  letter-spacing: 0.05em;
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
 }
 .about-quick-stats {
   display: flex;
@@ -1075,7 +1074,7 @@ ul, ol { list-style: none; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .hero .container {
+  .hero > .container {
     gap: 48px;
   }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -1090,10 +1089,10 @@ ul, ol { list-style: none; }
   .hamburger { display: flex; }
   .mobile-menu { display: block; }
 
-  .hero .container {
+  .hero > .container {
     grid-template-columns: 1fr;
     gap: 48px;
-    padding-bottom: 160px;
+    padding-bottom: 80px;
     text-align: center;
   }
   .hero-label { justify-content: center; }

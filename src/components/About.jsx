@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import portraitImg from '../assets/PersonBehindTheCode.jpg'
 
 function useReveal(options = {}) {
   const ref = useRef(null)
@@ -17,19 +18,17 @@ function useReveal(options = {}) {
 
 const quickStats = [
   { icon: '🎓', label: 'University', value: 'VIT Bhopal University — B.Tech CSE (AI & ML), 2025–2029' },
-  { icon: '📍', label: 'Location',   value: 'Hyderabad, India' },
-  { icon: '🏆', label: 'Achievement',value: 'AMD Slingshot — 9th / 248' },
-  { icon: '🛡️', label: 'CTF Team',   value: 'Cyber Snipers' },
+  { icon: '📍', label: 'Location', value: 'Hyderabad, India' },
 ]
 
 export default function About() {
-  const headRef   = useReveal()
-  const leftRef   = useReveal()
-  const rightRef  = useReveal()
+  const headRef = useReveal()
+  const leftRef = useReveal()
+  const rightRef = useReveal()
 
   return (
     <section id="about" className="section about">
-      <div className="about-diag" aria-hidden="true"/>
+      <div className="about-diag" aria-hidden="true" />
       <div className="container">
         <div ref={headRef} className="reveal">
           <p className="section-label">About Me</p>
@@ -40,7 +39,7 @@ export default function About() {
           {/* Left */}
           <div ref={leftRef} className="about-portrait reveal-left">
             <div className="portrait-frame" aria-hidden="true">
-              <span className="portrait-initials">DKT</span>
+              <img src={portraitImg} alt="Dhirendra Kumar Thakur" className="portrait-img" />
             </div>
             <div className="about-quick-stats">
               {quickStats.map(s => (
@@ -60,9 +59,9 @@ export default function About() {
               I'm <strong>Dhirendra Kumar Thakur</strong> — a first-year CSE (AI &amp; ML)
               student at VIT Bhopal, obsessed with cybersecurity, hackathons, and building
               things that matter. I've ranked <strong>9th out of 248</strong> at the AMD
-              Slingshot Prompthathon, competed in CTF events under <strong>"Cyber Snipers"</strong>,
+              Slingshot Prompthathon, competed in CTF events,
               and built civic-tech AI platforms that tackle real-world corruption.
-              When I'm not coding, I'm shooting photos or writing.
+              When I'm not coding, I'm shooting photos or writing or involved in fitness activities and sports.
             </p>
             <div className="info-grid">
               <div className="info-card">
@@ -73,17 +72,7 @@ export default function About() {
               <div className="info-card">
                 <div className="info-card-icon">💻</div>
                 <div className="info-card-label">Degree</div>
-                <div className="info-card-value">B.Tech CSE — AI &amp; ML<br/>2025–2029</div>
-              </div>
-              <div className="info-card">
-                <div className="info-card-icon">🏆</div>
-                <div className="info-card-label">Top Achievement</div>
-                <div className="info-card-value">AMD Slingshot<br/>9th / 248</div>
-              </div>
-              <div className="info-card">
-                <div className="info-card-icon">🛡️</div>
-                <div className="info-card-label">CTF Team</div>
-                <div className="info-card-value">Cyber Snipers</div>
+                <div className="info-card-value">B.Tech CSE — AI &amp; ML<br />2025–2029</div>
               </div>
             </div>
           </div>

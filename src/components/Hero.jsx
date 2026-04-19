@@ -2,20 +2,20 @@ import { useState, useEffect, useRef } from 'react'
 
 const roles = [
   'AI/ML Enthusiast',
-  'CTF Competitor',
   'Hackathon Builder',
   'Full Stack Developer',
   'Prompt Engineer',
+  'Always a Learner',
 ]
 
 function Typewriter() {
-  const [text, setText]         = useState('')
-  const [roleIdx, setRoleIdx]   = useState(0)
+  const [text, setText] = useState('')
+  const [roleIdx, setRoleIdx] = useState(0)
   const [deleting, setDeleting] = useState(false)
-  const timeoutRef              = useRef(null)
+  const timeoutRef = useRef(null)
 
   useEffect(() => {
-    const role  = roles[roleIdx]
+    const role = roles[roleIdx]
     const speed = deleting ? 40 : 80
 
     if (!deleting && text === role) {

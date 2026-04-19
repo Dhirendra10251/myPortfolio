@@ -22,15 +22,15 @@ const categories = [
       { icon: '🐙', name: 'Git & GitHub' },
       { icon: '🔢', name: 'NumPy' },
       { icon: '📊', name: 'Matplotlib' },
-      { icon: '🤖', name: 'Scikit-learn' },
+      { icon: '🎛️', name: 'Scikit-learn' },
     ],
   },
   {
     id: 'domains',
     label: '03 — Domains',
     skills: [
-      { icon: '🛡️', name: 'Cybersecurity & CTF' },
-      { icon: '🧬', name: 'Machine Learning' },
+      { icon: '🤖', name: 'Machine Learning' },
+      { icon: '📊', name: 'Data Structures and Algorithms' },
       { icon: '✍️', name: 'Prompt Engineering' },
       { icon: '👁️', name: 'Computer Vision' },
       { icon: '🏛️', name: 'Civic Tech' },
