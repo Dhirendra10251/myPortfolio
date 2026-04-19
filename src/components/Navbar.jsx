@@ -66,7 +66,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary nav-hire">Hire Me</a>
+          <a href="#contact" className="btn btn-primary nav-hire">Contact Me</a>
           <button
             className="hamburger"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -89,7 +89,7 @@ export default function Navbar() {
         ))}
         <a href="#contact" className="btn btn-primary" style={{ marginTop: 24, display: 'inline-flex' }}
           onClick={() => setMenuOpen(false)}>
-          Hire Me
+          Contact Me
         </a>
       </div>
     </>

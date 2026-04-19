@@ -80,7 +80,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta anim-item" style={{ '--d': '400ms' }}>
-            <a href="#contact" className="btn btn-primary">↗ Hire Me</a>
+            <a href="#contact" className="btn btn-primary">↗ Contact Me</a>
             <a
               href="https://github.com/Dhirendra10251"
               target="_blank"
