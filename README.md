@@ -141,7 +141,7 @@ The project also includes a `vercel.json` config for Vercel deployments:
 
 1. Install the Vercel CLI: `npm install -g vercel`
 2. Run `vercel` from the project root and follow the prompts
-
+3. **Live URL:** [my-portfolio-krktoqwij-dhirendras-projects-636faf93.vercel.app](https://vercel.com/dhirendras-projects-636faf93/my-portfolio)
 ---
 
 ## 📄 License
